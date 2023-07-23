@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+
+<SplitPane dividerPositions="0.5, 0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webbrowser.FXMLController">
+   <items>
+      <ToolBar prefHeight="31.0" prefWidth="598.0">
+         <items>
+            <HBox fx:id="h" prefHeight="21.0" prefWidth="579.0">
+               <children>
+                  <Button fx:id="newTab" mnemonicParsing="false" onAction="#newTab" text="+" />
+                  <Button fx:id="tab" mnemonicParsing="false" text="new tab" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <ToolBar prefHeight="42.0" prefWidth="598.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#goBack" text="&lt;-" />
+            <Button mnemonicParsing="false" onAction="#goForward" text="-&gt;" />
+            <Button mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <TextField maxWidth="1.7976931348623157E308" onAction="#Search" prefHeight="25.0" prefWidth="373.0" promptText="Enter you URL here...." fx:id="x" />
+            <Button mnemonicParsing="false" text="*" />
+            <ComboBox fx:id="c" prefHeight="25.0" prefWidth="6.0" />
+        </items>
+      </ToolBar>
+      <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" />
+   </items>
+</SplitPane>
